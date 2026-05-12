@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+
+    <h2>Clinic Dashboard</h2>
+
+    <div class="row mt-4">
+
+        <div class="col-md-4">
+            <div class="card p-3 shadow">
+                <h4>Total Appointments</h4>
+                <h2>{{ total }}</h2>
+            </div>
+        </div>
+
+    </div>
+
+    <h4 class="mt-5">Recent Bookings</h4>
+
+    <table class="table table-striped">
+        <tr>
+            <th>Name</th>
+            <th>Service</th>
+            <th>Date</th>
+        </tr>
+
+        {% for a in recent %}
+        <tr>
+            <td>{{ a.name }}</td>
+            <td>{{ a.service }}</td>
+            <td>{{ a.appointment_date }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</div>
+{% endblock %}

@@ -1,0 +1,186 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- HERO SLIDER -->
+<div id="heroCarousel"
+     class="carousel slide carousel-fade"
+     data-bs-ride="carousel"
+     data-bs-interval="4000">
+
+    <!-- INDICATORS -->
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+    </div>
+
+    <div class="carousel-inner">
+
+        <!-- SLIDE 1 -->
+        <div class="carousel-item active">
+
+           <section class="hero-section slide1">
+
+                <div class="container">
+                    <div class="row align-items-center min-vh-100">
+
+                        <!-- LEFT -->
+                        <div class="col-lg-5 hero-text">
+
+                            <span class="top-badge rotating-badge">
+                                TRUSTED ULTRASOUND & X-RAY CENTRE
+                            </span>
+
+                            <h1 class="hero-title mt-4">
+                                Accurate Ultrasound Scan & X-Ray Services
+                            </h1>
+
+                            <p class="hero-subtitle mt-3">
+                                Fast results, modern imaging equipment and
+                                professional diagnostic care in Nairobi CBD.
+                            </p>
+
+                            <div class="hero-buttons mt-4">
+
+                                <a href="{% url 'book' %}"
+                                class="btn btn-primary btn-lg">
+                                    Book Appointment
+                                </a>
+
+                                <a href="{% url 'services' %}"
+                                class="btn service-btn btn-lg">
+                                    Explore Services
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <!-- RIGHT -->
+                        <div class="col-lg-7 text-center">
+
+                            <img src="{% static 'images/doctor.webp' %}"
+                            class="hero-image img-fluid">
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="carousel-item">
+
+            <section class="hero-section slide2">
+
+                <div class="container">
+                    <div class="row align-items-center min-vh-100">
+
+                        <div class="col-lg-5 hero-text">
+
+                            <span class="top-badge rotating-badge">
+                                ADVANCED PREGNANCY SCANS
+                            </span>
+
+                            <h1 class="hero-title mt-4">
+                                2D, 3D & 4D Pregnancy Ultrasound
+                            </h1>
+
+                            <p class="hero-subtitle mt-3">
+                                Clear imaging technology for safe pregnancy
+                                monitoring and baby wellness assessment.
+                            </p>
+
+                            <div class="hero-buttons mt-4">
+
+                                <a href="{% url 'book' %}"
+                                class="btn btn-primary btn-lg">
+                                    Book Scan
+                                </a>
+
+                                <a href="{% url 'services' %}"
+                                class="btn service-btn btn-lg">
+                                    View Services
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-7 text-center">
+
+                            <img src="{% static 'images/toto.webp' %}"
+                            class="hero-image img-fluid">
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class="carousel-item">
+
+          <section class="hero-section slide3">
+               
+                <div class="container">
+                    <div class="row align-items-center min-vh-100">
+
+                        <div class="col-lg-5 hero-text">
+
+                            <span class="top-badge rotating-badge">
+                                MODERN DIGITAL IMAGING
+                            </span>
+
+                            <h1 class="hero-title mt-4">
+                                Fast & Reliable Digital X-Ray Services
+                            </h1>
+
+                            <p class="hero-subtitle mt-3">
+                                High-quality digital radiology imaging with
+                                quick reporting and professional care.
+                            </p>
+
+                            <div class="hero-buttons mt-4">
+
+                                <a href="{% url 'book' %}"
+                                class="btn btn-primary btn-lg">
+                                    Book X-Ray
+                                </a>
+
+                                <a href="{% url 'services' %}"
+                                class="btn service-btn btn-lg">
+                                    Explore Services
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-7 text-center">
+
+                          <img src="{% static 'images/xray.webp' %}"
+                               class="hero-image img-fluid">
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

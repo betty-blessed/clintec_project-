@@ -1,0 +1,187 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clintec Ultrasound & X-Ray</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+      <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+ <!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+
+        <a class="navbar-brand d-flex align-items-center" href="{% url 'home' %}">
+            <img src="{% static 'images/logo.png' %}" alt="Clintec Logo" height="45" class="me-2">
+          
+       </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nav">
+              <ul class="navbar-nav ms-auto">
+
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'home' %}">Home</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'services' %}">Services</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'about' %}">About</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="btn btn-primary ms-2" href="{% url 'book' %}">
+            Book
+        </a>
+    </li>
+
+   
+</ul>
+
+ </div>
+
+    </div>
+</nav>
+
+<!-- PAGE CONTENT -->
+<div style="margin-top:80px;">
+    {% block content %}
+    {% endblock %}
+</div>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white text-center py-4 mt-5">
+    <p>© 2026 Clintec Ultrasound & X-Ray</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- FLOATING CONTACT BUTTONS -->
+
+<a href="tel:+254708300588" class="floating-call">
+    <i class="bi bi-telephone-fill"></i>
+</a>
+
+<a href="https://wa.me/254708300588" target="_blank" class="floating-whatsapp">
+    <i class="bi bi-whatsapp"></i>
+</a>
+
+
+<!-- LIVE CHAT -->
+
+<div class="live-chat-container">
+
+    <!-- BUTTON -->
+    <button class="live-chat-btn" onclick="toggleChat()">
+        <i class="bi bi-chat-dots-fill"></i>
+    </button>
+
+    <!-- CHAT BOX -->
+    <div class="chat-box" id="chatBox">
+
+        <div class="chat-header">
+            Clintec Live Chat
+        </div>
+
+        <div class="chat-body" id="chatBody">
+
+            <div class="bot-message">
+                👋 Hello! Welcome to Clintec Ultrasound & X-Ray.
+            </div>
+
+        </div>
+
+        <div class="chat-footer">
+
+            <input type="text"
+                   id="userMessage"
+                   placeholder="Type message...">
+
+            <button onclick="sendMessage()">
+                Send
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- JAVASCRIPT -->
+<script>
+
+function toggleChat() {
+
+    let chatBox = document.getElementById("chatBox");
+
+    if (chatBox.style.display === "flex") {
+        chatBox.style.display = "none";
+    } else {
+        chatBox.style.display = "flex";
+    }
+}
+
+function sendMessage() {
+
+    let input = document.getElementById("userMessage");
+
+    let message = input.value.trim();
+
+    if (message === "") return;
+
+    let chatBody = document.getElementById("chatBody");
+
+    // USER MESSAGE
+    let userDiv = document.createElement("div");
+
+    userDiv.classList.add("user-message");
+
+    userDiv.innerHTML = message;
+
+    chatBody.appendChild(userDiv);
+
+    input.value = "";
+
+    // AUTO REPLY
+    setTimeout(function () {
+
+        let botDiv = document.createElement("div");
+
+        botDiv.classList.add("bot-message");
+
+        botDiv.innerHTML =
+            "Thank you for contacting Clintec. Our team will respond shortly.";
+
+        chatBody.appendChild(botDiv);
+
+        chatBody.scrollTop = chatBody.scrollHeight;
+
+    }, 700);
+
+    chatBody.scrollTop = chatBody.scrollHeight;
+}
+
+</script>
+</body>
+</html>
+

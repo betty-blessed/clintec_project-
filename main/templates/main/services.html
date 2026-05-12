@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="modern-services py-5">
+
+    <div class="container">
+
+        <!-- HEADING -->
+        <div class="text-center mb-5">
+            <h1 class="display-5 fw-bold">
+                Diagnostic Imaging Services
+            </h1>
+
+            <p class="lead text-muted">
+                Professional ultrasound and digital X-ray services with accurate reporting.
+            </p>
+        </div>
+
+        <div class="row g-5">
+
+            <!-- ULTRASOUND -->
+            <div class="col-lg-6">
+
+                <div class="modern-service-card">
+
+                    <div class="service-image-wrapper">
+                        <img src="{% static 'images/ultrasound.jpg' %}"
+                             class="modern-service-img">
+
+                        <div class="service-overlay">
+                            <h2>Ultrasound Services</h2>
+
+                            <p>
+                                Pregnancy scans, abdominal scans,
+                                pelvic scans, Breast scans and more.
+                            </p>
+
+                            <a href="{% url 'ultrasound' %}" 
+                               class="btn btn-pink service-btn-modern">
+                                  Explore Ultrasound
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- X-RAY -->
+            <div class="col-lg-6">
+
+                <div class="modern-service-card">
+
+                    <div class="service-image-wrapper">
+                        <img src="{% static 'images/xray.jpeg' %}"
+                             class="modern-service-img">
+
+                        <div class="service-overlay">
+                            <h2>Digital X-Ray</h2>
+
+                            <p>
+                                Chest X-rays, HSG Test,
+                                fracture assessment and radiology imaging.
+                            </p>
+
+                            <a href="{% url 'xray' %}"
+                               class="btn btn-sky service-btn-modern">
+                                 Explore X-Ray
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

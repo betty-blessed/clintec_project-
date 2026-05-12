@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="py-5">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h1 class="fw-bold">Digital X-Ray Services</h1>
+
+            <p class="text-muted">
+                High quality digital radiology imaging.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card border-0 shadow service-detail-card">
+
+                    <img src="{% static 'images/xray.jpeg' %}"
+                         class="service-detail-img">
+
+                    <div class="card-body">
+                        <h4>Chest X-Ray</h4>
+                        <p>Chest and lung imaging.</p>
+
+                        <a href="{% url 'book' %}" class="btn btn-primary">
+                            Book X-Ray
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card border-0 shadow service-detail-card">
+
+                    <img src="{% static 'images/xray.jpeg' %}"
+                         class="service-detail-img">
+
+                    <div class="card-body">
+                        <h4>Spine X-Ray</h4>
+                        <p>Detailed spinal imaging.</p>
+
+                        <a href="{% url 'book' %}" class="btn btn-primary">
+                            Book X-Ray
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card border-0 shadow service-detail-card">
+
+                    <img src="{% static 'images/xray.jpeg' %}"
+                         class="service-detail-img">
+
+                    <div class="card-body">
+                        <h4>Fracture Assessment</h4>
+                        <p>Bone and fracture imaging.</p>
+
+                        <a href="{% url 'book' %}" class="btn btn-primary">
+                            Book X-Ray
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

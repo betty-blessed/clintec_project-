@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="py-5">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h1 class="fw-bold">Ultrasound Services</h1>
+            <p class="text-muted">
+                Accurate and reliable ultrasound imaging.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card border-0 shadow service-detail-card">
+                    <img src="{% static 'images/pregnancy.jpg' %}" class="service-detail-img">
+
+                    <div class="card-body">
+                        <h4>Pregnancy Scan</h4>
+                        <p>2D, 3D & 4D baby scans.</p>
+
+                        <a href="{% url 'book' %}" class="btn btn-primary">
+                            Book Scan
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card border-0 shadow service-detail-card">
+                    <img src="{% static 'images/ultrasound.jpg' %}" class="service-detail-img">
+
+                    <div class="card-body">
+                        <h4>Abdominal Scan</h4>
+                        <p>Liver, kidneys and internal organs.</p>
+
+                        <a href="{% url 'book' %}" class="btn btn-primary">
+                            Book Scan
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card border-0 shadow service-detail-card">
+                    <img src="{% static 'images/ultrasound.jpg' %}" class="service-detail-img">
+
+                    <div class="card-body">
+                        <h4>Pelvic Scan</h4>
+                        <p>Pelvic and reproductive imaging.</p>
+
+                        <a href="{% url 'book' %}" class="btn btn-primary">
+                            Book Scan
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}
