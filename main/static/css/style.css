@@ -718,3 +718,98 @@ footer{
 
     animation: rotateBadge 8s linear infinite;
 }
+/* CALL TEXT showing */
+.floating-call{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 18px;
+    width: auto;
+    border-radius: 50px;
+}
+
+.call-text{
+    font-size: 14px;
+    font-weight: 600;
+    display: none;
+}
+
+/* SHOW TEXT ON HOVER */
+.floating-call:hover .call-text{
+    display: inline;
+}
+
+/* FACEBOOK */
+.floating-facebook{
+    position: fixed;
+    bottom: 170px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    background: #1877F2;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    z-index: 9999;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* INSTAGRAM */
+.floating-instagram{
+    position: fixed;
+    bottom: 235px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    z-index: 9999;
+}
+
+/* TIKTOK */
+.floating-tiktok{
+    position: fixed;
+    bottom: 300px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    background: #000;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    z-index: 9999;
+}
+.live-chat-btn{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 18px;
+    border-radius: 50px;
+    width: auto;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* TEXT */
+.chat-text{
+    display: inline-block;
+    color: white;
+}
+
+/* OPTIONAL: hide text on small screens */
+@media (max-width: 600px){
+    .chat-text{
+        display: none;
+    }
+}
