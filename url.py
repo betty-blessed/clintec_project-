@@ -6,3 +6,11 @@ urlpatterns = [
     path('', include('your_app_name.urls')),
 ]
 
+
+
+
+
+
+
+
+# Project level url

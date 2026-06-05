@@ -12,3 +12,11 @@ urlpatterns = [
     path('ultrasound/', views.ultrasound, name='ultrasound'),
     path('xray/', views.xray, name='xray'),
 ]
+
+
+
+
+# App level url
+#This is the routing centre of your website
+#It decides where a request goes
+#It maps url patterns and views function

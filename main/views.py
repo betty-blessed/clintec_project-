@@ -93,6 +93,7 @@ def about(request):
 
 def contact(request):
     return render(request, 'main/contact.html')
+
 def ultrasound(request):
     return render(request, 'main/ultrasound.html')
 
